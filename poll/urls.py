@@ -18,4 +18,6 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^(?P<ballot_id>[0-9]+)/results/$', veiws.results, name="results"),
+    url(r'^(?P<ballot_id>[0-9]+)/vote/$', veiws.vote, name="vote")
 ]
